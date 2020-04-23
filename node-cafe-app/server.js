@@ -1,7 +1,7 @@
 /*
-* This file sets up a Web Server and creates an Entry Point for the HUT Cafe Application
-*author: @celsoM 
-Code Reference: https://github.com/expressjs/body-parser
+ This file sets up a Web Server and creates an Entry Point for the HUT Cafe Application
+ Author: @celsoM 
+ Code Reference: https://github.com/expressjs/body-parser
 */
 
 // import express and body parser
@@ -37,6 +37,9 @@ mongoose.connect(dbConfig.url, {
 app.get('/', (req, res) => {
     res.json({"message": "Welcome to HUT Cafe."});
 });
+
+// Require Items for menu list routes
+require('./app/routes/menu.routes.js')(app);
 
 // application listening to port 1234
 app.listen(1234, () => {
