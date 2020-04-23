@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const MenuSchema = mongoose.Schema({
     item: String,
     description: String,
-    price: int
+    price: Number
 }, {
     timestamps: true
 });
