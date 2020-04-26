@@ -38,6 +38,9 @@ app.get('/', (req, res) => {
     res.json({"message": "Welcome to HUT Cafe."});
 });
 
+app.get('/', function(req, res){
+    res.json('./views/index.html');
+});
 // Require Items for menu list routes
 require('./app/routes/menu.routes.js')(app);
 
