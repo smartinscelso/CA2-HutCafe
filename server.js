@@ -17,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // parsing requests of type JSON
 app.use(bodyParser.json())
 
+app.use(express.static('app/public'));
+
 // Configuring database
 const dbConfig = require('./config/db.config.js');
 const mongoose = require('mongoose');
