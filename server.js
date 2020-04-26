@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 });
 
 // Require Items for menu list routes
-require('./app/routes/menu.routes.js')(app);
+require('app/routes/menu.routes.js')(app);
 
 // application listening to port 1234
 app.listen(1234, () => {
