@@ -35,12 +35,11 @@ mongoose.connect(dbConfig.url, {
 
 // defining a route with middleware
 app.get('/', (req, res) => {
-    res.json({"message": "Welcome to HUT Cafe."});
+    res.sendFile('app/public/index.html', {root: __dirname});
+    //res.sendFile('./app/views/index.html')
+    //res.json({"message": "Welcome to HUT Cafe."});
 });
 
-app.get('/', function(req, res){
-    res.json('./views/index.html');
-});
 // Require Items for menu list routes
 require('./app/routes/menu.routes.js')(app);
 
